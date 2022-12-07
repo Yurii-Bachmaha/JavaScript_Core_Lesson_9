@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="task01.js"></script>
+    <title>Task01</title>
+</head>
+
+<body>
+    <h1>Registration form</h1>
+    <form>
+        <label>Surname</label><br><input id="surname" type="text" onkeyup="check()"><br>
+        <label>Name</label><br><input id="name" type="text" onkeyup="check()"><br>
+        <label>Age</label><br><input id="age" type="text" onkeyup="check()" onblur="validateAge()"><br>
+        <label>Residence</label><br><input id="residence" type="text" onkeyup="check()"><br>
+        <p id="message" style="color:red;">To submit the form, you need to correctly enter all the fields!</p>
+        <input id="AjaxGET" type="button" value="Ajax GET" onclick="sendDataByGetMethod()" disabled>
+        <input id="AjaxPOST" type="button" value="Ajax POST" onclick="sendDataByPostMethod()" disabled>
+        <input type="button" value="Clear fields" onclick="clearFields()">
+    </form>
+
+    <style>
+        .error {
+            border-color: red;
+            outline: 0;
+        }
+    </style>
+</body>
+
+</html>
